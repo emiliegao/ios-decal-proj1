@@ -19,7 +19,6 @@ class DailyStatsViewController: UITableViewController {
                 complete.append(toDoItems[i])
             }
         }
-        print(complete)
         self.tableView.reloadData()
     }
 

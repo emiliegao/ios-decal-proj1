@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--To-Do List-->
@@ -77,7 +78,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0mF-xM-bXi" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="cjT-EW-Xa6" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3126" y="821"/>
+            <point key="canvasLocation" x="3126" y="513"/>
         </scene>
         <!--New Item-->
         <scene sceneID="Kf3-eD-oac">
@@ -107,12 +108,37 @@
                                 <rect key="frame" x="20" y="139" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="139" width="560" height="30"/>
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="20" y="139" width="368" height="30"/>
                                 </variation>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="T9P-81-TsA" firstAttribute="leading" secondItem="lDI-42-rlk" secondAttribute="leadingMargin" constant="10" id="9W6-wi-u1e"/>
+                            <constraint firstItem="T9P-81-TsA" firstAttribute="top" secondItem="gWU-Zv-9ps" secondAttribute="bottom" constant="10" id="SJW-vr-P98"/>
+                            <constraint firstItem="gWU-Zv-9ps" firstAttribute="top" secondItem="LAE-HM-WwH" secondAttribute="bottom" constant="10" id="kud-oo-rqz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="T9P-81-TsA" secondAttribute="trailing" constant="10" id="lX7-57-ZLS"/>
+                            <constraint firstItem="gWU-Zv-9ps" firstAttribute="leading" secondItem="lDI-42-rlk" secondAttribute="leadingMargin" constant="10" id="yft-zB-gRH"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="kud-oo-rqz"/>
+                                <exclude reference="yft-zB-gRH"/>
+                                <exclude reference="9W6-wi-u1e"/>
+                                <exclude reference="SJW-vr-P98"/>
+                                <exclude reference="lX7-57-ZLS"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="constraints">
+                                <include reference="kud-oo-rqz"/>
+                                <include reference="yft-zB-gRH"/>
+                                <include reference="9W6-wi-u1e"/>
+                                <include reference="SJW-vr-P98"/>
+                                <include reference="lX7-57-ZLS"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="New Item" id="TpX-cd-CcU">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="eaZ-xN-PH4">
@@ -169,7 +195,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HVd-Th-FTk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2413" y="821"/>
+            <point key="canvasLocation" x="2413" y="513"/>
         </scene>
     </scenes>
 </document>
